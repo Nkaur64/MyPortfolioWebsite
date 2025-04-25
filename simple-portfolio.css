@@ -1,0 +1,76 @@
+/* === Reset and Base Styles === */
+* {
+    text-align: center;
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+body {
+    background-color: #fff;
+    color: #333;
+    line-height: 1.6;
+    padding: 20px;
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+/* === Header === */
+h1 {
+    text-align: center;
+    font-size: 2.5rem;
+    margin-bottom: 10px;
+    color: #F5834D;
+}
+
+h2 {
+    text-align: center;
+    font-size: 1.5rem;
+    margin-bottom: 20px;
+    color: #444;
+}
+
+/* === Sections === */
+section {
+    margin-bottom: 30px;
+    padding: 20px;
+    border: 1px solid #eee;
+    border-radius: 10px;
+    background-color: #f9f9f9;
+}
+
+/* === Lists === */
+ul {
+    list-style: none;
+    padding-left: 0;
+}
+
+li {
+    margin-bottom: 10px;
+}
+
+/* === Footer === */
+footer {
+    text-align: center;
+    margin-top: 40px;
+    color: #777;
+    font-size: 0.9rem;
+}
+
+/* === My Interests Section === */
+#about h3 {
+    color: #F5834D;
+    margin-top: 20px;
+    font-size: 1.3rem;
+}
+
+#about ul {
+    padding-left: 20px;
+}
+
+#about ul li {
+    font-size: 1.1rem;
+    margin: 5px 0;
+    line-height: 1.6;
+}

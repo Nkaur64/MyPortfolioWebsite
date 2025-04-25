@@ -1,0 +1,131 @@
+/* General Style */
+body {
+    font-family: 'Poppins', sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #F8F5EC;
+    color: #50413C;
+  }
+  
+  /* Header */
+  header {
+    background-color: #50413C;
+    color: white;
+    padding: 20px;
+    text-align: center;
+  }
+  
+  nav ul {
+    list-style: none;
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    padding: 0;
+    margin-top: 10px;
+  }
+  
+  nav a {
+    color: white;
+    text-decoration: none;
+    font-weight: bold;
+  }
+  
+  nav a:hover {
+    color: #FFCC63;
+  }
+  
+  /* To-Do App */
+  .todo-app {
+    max-width: 600px;
+    margin: 40px auto;
+    padding: 20px;
+    background-color: white;
+    border-radius: 15px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  }
+  
+  .todo-app h2 {
+    margin-bottom: 20px;
+    font-size: 24px;
+    color: #50413C;
+  }
+  
+  .input-section {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 20px;
+  }
+  
+  #todo-input {
+    flex: 1;
+    padding: 10px;
+    border-radius: 10px;
+    border: 1px solid #ccc;
+    margin-right: 10px;
+  }
+  
+  button {
+    background-color: #F5834D;
+    color: white;
+    border: none;
+    padding: 10px 16px;
+    border-radius: 10px;
+    cursor: pointer;
+    font-weight: bold;
+  }
+  
+  button:hover {
+    background-color: #FFCC63;
+    color: #50413C;
+  }
+  
+  /* List of Tasks */
+  #todo-list {
+    list-style-type: none;
+    padding: 0;
+  }
+  
+  #todo-list li {
+    background-color: #F8F5EC;
+    margin-bottom: 10px;
+    padding: 12px;
+    border-left: 5px solid #F5834D;
+    border-radius: 8px;
+    display: flex;
+    justify-content: flex-start; /* Align items at the start */
+    align-items: center;
+  }
+  
+  #todo-list li.completed {
+    text-decoration: line-through;
+    opacity: 0.6;
+  }
+  
+  /* Delete Button */
+  .delete-btn {
+    background-color: transparent;
+    border: none;
+    color: #FF6B6B; /* Light red color */
+    font-size: 20px;
+    cursor: pointer;
+    margin-right: 10px; /* Space between the button and task text */
+  }
+  
+  .delete-btn:hover {
+    color: #FF4D4D; /* Darker red color on hover */
+  }
+  
+  /* Task Text */
+  #todo-list li span {
+    flex-grow: 1; /* Makes the task text grow to fill space */
+  }
+  
+  /* Footer */
+  footer {
+    background-color: #50413C;
+    color: white;
+    text-align: center;
+    padding: 15px;
+    margin-top: 40px;
+  }
+  

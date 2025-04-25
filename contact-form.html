@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Styled Contact Form</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="contact-form.css">
+    <style>
+        #thank-you-message {
+          display: none;
+          margin-top: 20px;
+          color: green;
+          font-weight: bold;
+        }
+      </style>
+</head>
+<body>
+    <header>
+        <h1>Navneet Kaur</h1>
+        <nav>
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="about.html">About</a></li>
+                <li><a href="projects.html">Projects</a></li>
+                <li><a href="contact-form.html">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+<main>
+    <section id="contact">
+        <h2>Contact Form</h2>
+        <p>Please fill out the form below to get in touch with me</p>
+        <form id="contactForm" action="#" method="post">
+            <label for="name">Name:</label><br>
+            <input type="text" id="name" name="name" required><br>
+
+            <label for="email">Email:</label><br>
+            <input type="email" id="email" name="email" required><br>
+
+            <label for="message">Message</label><br/>
+            <textarea id="message" name="message" rows="5" required></textarea><br>
+
+            <input type="submit" value="Submit">
+        </form>
+        <div id="thank-you-message">Thank you! Your message has been sent.</div>
+    </section>
+</main>
+    <footer>
+        <p>&copy; 2025 My Portfolio. All rights reserved.</p>
+    </footer>
+    <script>
+        const form = document.getElementById("contactForm");
+        const thankYou = document.getElementById("thank-you-message");
+    
+        form.addEventListener("submit", function (e) {
+          e.preventDefault(); // prevent actual form submission
+    
+          if (form.checkValidity()) {
+            thankYou.style.display = "block";
+            form.reset();
+          }
+        });
+      </script>
+    </body>
+    </html>
