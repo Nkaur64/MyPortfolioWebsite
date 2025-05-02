@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Digital Terrarium</title>
+  <link rel="stylesheet" href="Digital-Terrarium.css" />
+</head>
+<body>
+  <header>
+    <h1>Digital Terrarium</h1>
+  </header>
+  <main>
+    <!-- The aria-label attribute provides an accessible name for screen readers, describing the purpose of this section -->
+    <section class="staging-area" aria-label="Plant selection area">
+      <img src="images/plant1.png" alt="Plant 1" draggable="true" class="draggable" width="100" height="100" />
+      <img src="images/plant2.png" alt="Plant 2" draggable="true" class="draggable" width="100" height="100" />
+      <img src="images/plant3.png" alt="Plant 3" draggable="true" class="draggable" width="100" height="100" />
+      <img src="images/plant4.png" alt="Plant 4" draggable="true" class="draggable" width="100" height="100" />
+      <img src="images/plant5.png" alt="Plant 5" draggable="true" class="draggable" width="100" height="100" />
+      <img src="images/plant6.png" alt="Plant 6" draggable="true" class="draggable" width="100" height="100" />
+    </section>
+
+    <section class="terrarium" id="terrarium" aria-label="Terrarium drop area">
+      <div class="glass-overlay"></div>
+    </section>
+  </main>
+  <footer>
+    <p><small>Drag a plant from the top into the terrarium!</small></p>
+  </footer>
+  <script src="Digital-Terrarium.js" defer></script>
+</body>
+</html>
