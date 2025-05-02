@@ -1,5 +1,10 @@
 /* Import Google Font */
-@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap');
+/* Google Font is now imported via the HTML <head> for better performance */
+
+:root {
+    --background-color: #F8F5EC;
+    --hover-color: #FFCC63;
+}
 
 body {
     font-family: 'Poppins', sans-serif;
@@ -7,14 +12,20 @@ body {
     padding: 0;
     line-height: 1.6;
     background-color: #F8F5EC;
+    color: var(--dark-brown);
+    overflow-x: hidden;
+}
+body {
+    background-color: var(--background-color);
     color: #50413C;
+    overflow-x: hidden;
 }
 
 /* Header */
 header img {
     height: 60px;
     vertical-align: middle;
-    margin-right: 10px;
+    background-color: var(--dark-brown);
 }
 
 header {
@@ -44,13 +55,14 @@ nav a {
     color: white;
     text-decoration: none;
     font-weight: 600;
-    transition: color 0.3s ease;
+    color: var(--hover-color);
 }
 
 nav a:hover {
     color: #FFCC63;
 }
 
+/* Projects Section - updated for fixed height layout */
 /* Projects Section */
 #projects {
     padding: 30px 20px;
@@ -67,25 +79,18 @@ nav a:hover {
     margin-bottom: 20px;
 }
 
-/* Projects Layout */
+/* Projects Layout - updated to single column */
 .projects-container {
     display: flex;
-    justify-content: center;
-    flex-wrap: wrap;
+    flex-direction: column;
+    align-items: center;
     gap: 40px;
-    max-width: 1200px;
+    max-width: 800px;
     margin: 0 auto;
     padding: 20px;
 }
 
-.left-column, .right-column {
-    display: flex;
-    flex-direction: column;
-    gap: 20px;
-    width: 100%;
-    max-width: 500px;
-}
-
+/* Project Label */
 .project-label {
     background-color: #F5834D;
     color: white;
@@ -101,11 +106,13 @@ nav a:hover {
     padding: 20px;
     border-radius: 12px;
     background-color: #f9f9f9;
-    height: 220px;
+    width: 100%;
+    max-width: 700px;
     box-sizing: border-box;
     display: flex;
     flex-direction: column;
-    justify-content: flex-start;
+    justify-content: space-between;
+    text-align: left;
 }
 
 .project-box h3 {
@@ -127,26 +134,6 @@ nav a:hover {
     text-decoration: underline;
 }
 
-/* Media Query for Responsive Layout */
-@media (min-width: 768px) {
-    .projects-container {
-        flex-direction: row;
-        align-items: flex-start;
-    }
-
-    .left-column, .right-column {
-        width: 45%;
-    }
-}
-
-/* Footer */
-footer {
-    background-color: #50413C;
-    color: white;
-    text-align: center;
-    padding: 15px;
-    margin-top: 40px;
-}
 
 /* Social Icons Styling */
 .social-icons {
@@ -160,24 +147,49 @@ footer {
 .social-icons img {
     transition: transform 0.3s ease;
     border-radius: 50%;
+    will-change: transform;
+}
+
+.social-icons {
+    padding: 10px; /* Added padding to prevent overlap */
 }
 
 .social-icons img:hover {
     transform: scale(1.1);
 }
 
-/* Responsive Layout for Smaller Screens */
+@media (max-width: 900px) {
+    .project-box {
+        flex-grow: 1;
+    }
+}
+
+@media (max-width: 600px) {
+    nav ul {
+        flex-direction: row;
+        gap: 10px;
+    }
+}
+
 @media (max-width: 600px) {
     nav ul {
         flex-direction: column;
         gap: 10px;
     }
 
-    .projects-container {
-        gap: 20px;
+    #projects {
+        padding: 20px;
     }
 
-    form {
+    .projects-container {
+        flex-direction: column;
+        padding: 10px;
+    }
+
+    .project-box {
+        max-width: 100%;
+        flex: 1 1 100%;
         padding: 15px;
+        margin: 10px 0;
     }
 }
